@@ -1,0 +1,16 @@
+For this challenge we want to understand your knowledge of CSS Layouts.
+
+In the `mockups` directory, you will find 3 images that will show 3 different layouts.
+Using the markup in `index.html`, we would like you to create these 3 layouts.
+
+Rules
+------
+1. Try not to change the order of the structure of the HTML elements
+2. You can as many additional attributes/selectors to the elements as you like
+3. Submit your working files any way you would like.
+4. The hex codes used are:
+    - #37123C
+    - #71677C
+    - #A99F96
+    - #DDA77B
+    - #945D5E
