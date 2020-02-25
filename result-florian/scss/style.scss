@@ -1,0 +1,72 @@
+//colors - Names are randomly picked.
+$purple: #37123C;
+$purple-light: #71677C;
+$dim-grey: #A99F96;
+$salmon-light: #DDA77B;
+$salmon: #945D5E;
+
+html,
+body {
+  height: 100%;
+}
+
+// Using BEM in Sass supports cleaner code.
+.page {
+
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar sidebar sidebar"
+    "one one one"
+    "two two two"
+    "footer footer footer";
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "sidebar one two"
+      "footer footer footer"
+      "footer footer footer"
+      "footer footer footer";
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas:
+      "header header header"
+      "sidebar two two"
+      "sidebar one one"
+      "footer footer footer";
+  }
+
+  &__header {
+    padding: 3em;
+    background-color: $purple;
+    grid-area: header;
+  }
+
+  &__sidebar {
+    background-color: $purple-light;
+    grid-area: sidebar;
+  }
+
+  &__section_one {
+    background-color: $dim-grey;
+    grid-area: one;
+  }
+
+  &__section_two {
+    background-color: $salmon-light;
+    grid-area: two;
+  }
+
+  &__footer {
+    padding: 3em;
+    background-color: $salmon;
+    grid-area: footer;
+  }
+}
